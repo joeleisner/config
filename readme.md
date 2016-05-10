@@ -71,6 +71,6 @@
   - [Linter ES Lint](https://atom.io/packages/linter-phplint)
   - [Pigments](https://atom.io/packages/pigments)
 
-## Use it yourself
+## Use It Yourself
 
 Fork this repo, or just copy-paste things you need, and make it your own. **Please be sure to change your `.gitconfig` name and email address though!**
