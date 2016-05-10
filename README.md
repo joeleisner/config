@@ -14,8 +14,8 @@
 
 ### 1. Prep OS X
 
-- Download and install latest version of Xcode from the Mac App Store.
-- Download and install Xcode Command Line Tools from <https://developer.apple.com/downloads/>.
+- Download and install latest version of Xcode from the Mac App Store
+- Download and install Xcode Command Line Tools from <https://developer.apple.com/downloads/>
 
 ### 2. Prep Terminal.app
 
@@ -34,13 +34,13 @@
 ### 5. Secure Git(Hub) access
 
 - [Generate new SSH key](https://help.github.com/articles/generating-ssh-keys/)
-- [Generate an access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for Terminal to auth your GitHub account when 2FA is enabled.
+- [Generate an access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for Terminal to auth your GitHub account when 2FA is enabled
 
 ### 6. Setup Ruby
 
-- Install rbenv via Homebrew: `brew install rbenv`.
-- Download a version of Ruby via rbenv (e.g., `rbenv install 2.2.3`). See <https://gorails.com/setup/osx/10.11-el-capitan>.
-- Make it the global version of Ruby: `rbenv global 2.2.3`.
+- Install rbenv via Homebrew: `brew install rbenv`
+- Download a version of Ruby via rbenv (e.g., `rbenv install 2.2.3`). See <https://gorails.com/setup/osx/10.11-el-capitan>
+- Make it the global version of Ruby: `rbenv global 2.2.3`
 
 ### 7. Setup PHP, Composer & Laravel
 
@@ -50,12 +50,16 @@
 
 ### 6. Additional dependencies
 
-- Install Node.js via Homebrew: `brew install node`.
-- Install Sass: `gem install sass`.
+- Install Node.js via Homebrew: `brew install node`
+- Install Sass: `gem install sass`
+- Install the Fira type family (used in the Material terminal theme) from the [mozilla/Fira](https://github.com/mozilla/Fira) repo
 
 ### 7. Setup Atom
 
 - Enable `atom` Terminal commands: from Atom.app, open the Atom menu and select *Install Shell Commands*
+- Install favorite themes
+  - [Atom Material UI](https://atom.io/themes/atom-material-ui)
+  - [Atom Material Syntax](https://atom.io/themes/atom-material-syntax)
 - Install favorite packages
   - [Emmet](https://atom.io/packages/emmet)
   - [File Icons](https://atom.io/packages/file-icons)
