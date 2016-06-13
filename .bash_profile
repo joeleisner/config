@@ -67,7 +67,7 @@ alias n-usd="npm uninstall $@ --save-dev"
 # Homebrew
 alias br="brew"
 alias br-cu="brew cleanup"
-alias br-d="brew doctor"
+alias br-doc="brew doctor"
 alias br-i="brew install"
 alias br-ls="brew list"
 alias br-ln="brew link"
@@ -78,6 +78,7 @@ alias br-ud="brew update"
 alias br-ug="brew upgrade"
 alias br-ui="brew uninstall"
 alias br-ul="brew unlink"
+alias br-ut="brew untap"
 
 # Terminal Prompt
 function parse_git_branch () {
@@ -86,6 +87,10 @@ function parse_git_branch () {
 BLUE="\[\033[0;34m\]"
 NO_COLOR="\[\033[0;0m\]"
 PS1="\W$BLUE\$(parse_git_branch)$NO_COLOR: "
+
+# LS Colors
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Path Exports
 # Homebrew SBin
