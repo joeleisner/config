@@ -1,9 +1,10 @@
 # General
-alias finder="open ."
+alias ~="cd ~/"
 alias .="open ."
 alias ..="cd ../"
 alias ...="cd ../.."
 alias c="clear"
+alias finder="open ."
 
 # Work
 function dev() {
@@ -13,18 +14,39 @@ function dev() {
         cd Documents/Development/$@
     fi
 }
-function dev-c() {
+function dev-j() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Clients/
+        cd Documents/Development/Javascript/
     else
-        cd Documents/Development/Clients/$@
+        cd Documents/Development/Javascript/$@
     fi
 }
-function dev-p() {
+function dev-m() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Personal/
+        cd Documents/Development/Misc./
     else
-        cd Documents/Development/Personal/$@
+        cd Documents/Development/Misc./$@
+    fi
+}
+function dev-n() {
+    if [ -z "$@" ]; then
+        cd Documents/Development/Node/
+    else
+        cd Documents/Development/Node/$@
+    fi
+}
+function dev-si() {
+    if [ -z "$@" ]; then
+        cd Documents/Development/Sites/
+    else
+        cd Documents/Development/Sites/$@
+    fi
+}
+function dev-st() {
+    if [ -z "$@" ]; then
+        cd Documents/Development/Styling/
+    else
+        cd Documents/Development/Styling/$@
     fi
 }
 function dev-t() {
@@ -32,6 +54,13 @@ function dev-t() {
         cd Documents/Development/Test/
     else
         cd Documents/Development/Test/$@
+    fi
+}
+function dev-w() {
+    if [ -z "$@" ]; then
+        cd Documents/Development/WordPress/
+    else
+        cd Documents/Development/WordPress/$@
     fi
 }
 
@@ -67,7 +96,7 @@ alias n-usd="npm uninstall $@ --save-dev"
 # Homebrew
 alias br="brew"
 alias br-cu="brew cleanup"
-alias br-d="brew doctor"
+alias br-doc="brew doctor"
 alias br-i="brew install"
 alias br-ls="brew list"
 alias br-ln="brew link"
@@ -86,6 +115,10 @@ function parse_git_branch () {
 BLUE="\[\033[0;34m\]"
 NO_COLOR="\[\033[0;0m\]"
 PS1="\W$BLUE\$(parse_git_branch)$NO_COLOR: "
+
+# Allow 'ls' to identify item types with colors
+export CLICOLOR=1;
+export LSCOLORS=exfxcxdxbxegedabagacad;
 
 # Path Exports
 # Homebrew SBin
