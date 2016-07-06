@@ -107,6 +107,7 @@ alias br-ud="brew update"
 alias br-ug="brew upgrade"
 alias br-ui="brew uninstall"
 alias br-ul="brew unlink"
+alias br-ut="brew untap"
 
 # Terminal Prompt
 function parse_git_branch () {
@@ -116,9 +117,9 @@ BLUE="\[\033[0;34m\]"
 NO_COLOR="\[\033[0;0m\]"
 PS1="\W$BLUE\$(parse_git_branch)$NO_COLOR: "
 
-# Allow 'ls' to identify item types with colors
-export CLICOLOR=1;
-export LSCOLORS=exfxcxdxbxegedabagacad;
+# LS Colors
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Path Exports
 # Homebrew SBin
