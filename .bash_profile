@@ -14,53 +14,60 @@ function dev() {
         cd Documents/Development/$@
     fi
 }
-function dev-j() {
+function dev-css() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Javascript/
+        cd Documents/Development/CSS/
     else
-        cd Documents/Development/Javascript/$@
+        cd Documents/Development/CSS/$@
     fi
 }
-function dev-m() {
+function dev-js() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Misc./
+        cd Documents/Development/JS/
     else
-        cd Documents/Development/Misc./$@
+        cd Documents/Development/JS/$@
     fi
 }
-function dev-n() {
+function dev-misc() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Node/
+        cd Documents/Development/Miscellaneous/
     else
-        cd Documents/Development/Node/$@
+        cd Documents/Development/Miscellaneous/$@
     fi
 }
-function dev-si() {
+function dev-php() {
+    if [ -z "$@" ]; then
+        cd Documents/Development/PHP/
+    else
+        cd Documents/Development/PHP/$@
+    fi
+}
+function dev-sites() {
     if [ -z "$@" ]; then
         cd Documents/Development/Sites/
     else
         cd Documents/Development/Sites/$@
     fi
 }
-function dev-st() {
+function dev-temp() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Styling/
+        cd Documents/Development/Temporary/
     else
-        cd Documents/Development/Styling/$@
+        cd Documents/Development/Temporary/$@
     fi
 }
-function dev-t() {
+function dev-term() {
     if [ -z "$@" ]; then
-        cd Documents/Development/Test/
+        cd Documents/Development/Terminal/
     else
-        cd Documents/Development/Test/$@
+        cd Documents/Development/Terminal/$@
     fi
 }
-function dev-w() {
+function dev-work() {
     if [ -z "$@" ]; then
-        cd Documents/Development/WordPress/
+        cd Documents/Development/Work/
     else
-        cd Documents/Development/WordPress/$@
+        cd Documents/Development/Work/$@
     fi
 }
 
@@ -81,19 +88,6 @@ alias g-ps="git push"
 alias g-rao="git remote add origin"
 alias g-st="git status"
 
-# Node
-alias n-i="npm i"
-alias n-ig="npm i -g"
-alias n-in="npm init"
-alias n-is="npm i $@ --save"
-alias n-isd="npm i $@ --save-dev"
-alias n-od="npm outdated"
-alias n-u="npm uninstall"
-alias n-ud="npm update"
-alias n-ug="npm uninstall -g"
-alias n-us="npm uninstall $@ --save"
-alias n-usd="npm uninstall $@ --save-dev"
-
 # Homebrew
 alias br="brew"
 alias br-cu="brew cleanup"
@@ -110,6 +104,41 @@ alias br-ui="brew uninstall"
 alias br-ul="brew unlink"
 alias br-ut="brew untap"
 
+# Node
+alias n-i="npm i"
+alias n-ig="npm i -g"
+alias n-in="npm init"
+alias n-is="npm i $@ --save"
+alias n-isd="npm i $@ --save-dev"
+alias n-ls="npm ls --depth=0"
+alias n-od="npm outdated"
+alias n-u="npm uninstall"
+alias n-ud="npm update"
+alias n-uig="npm uninstall -g"
+alias n-uis="npm uninstall $@ --save"
+alias n-uisd="npm uninstall $@ --save-dev"
+
+# Yarn
+alias y="yarn"
+alias y-a="yarn add"
+alias y-ad="yarn add $@ -D"
+alias y-ag="yarn global add $@"
+alias y-ao="yarn add $@ -O"
+alias y-ap="yarn add $@ -P"
+alias y-i="yarn install"
+alias y-in="yarn init"
+alias y-li="yarn login"
+alias y-lo="yarn logout"
+alias y-ls="yarn ls --depth=0"
+alias y-o="yarn outdated"
+alias y-p="yarn publish"
+alias y-r="yarn remove"
+alias y-rg="yarn global remove"
+alias y-run="yarn run"
+alias y-su="yarn self-update"
+alias y-ug="yarn upgrade"
+alias y-v="yarn version"
+
 # Terminal Prompt
 function parse_git_branch () {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -123,13 +152,11 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Path Exports
-# Homebrew SBin
-export PATH="/usr/local/sbin:$PATH"
-# Homebrew Bin
-export PATH="/usr/local/bin:$PATH"
-# PHP
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+# Homebrew
+SBIN="/usr/local/sbin"
+BIN="/usr/local/bin"
 # Composer
-export PATH="~/.composer/vendor/bin:$PATH"
-# Node
-export PATH="$HOME/.node/bin:$PATH"
+COMPOSER="~/.composer/vendor/bin"
+# Path
+PATH="$SBIN:$BIN:$COMPOSER:$PATH"
+export PATH
