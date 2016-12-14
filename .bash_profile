@@ -130,6 +130,7 @@ alias y-in="yarn init"
 alias y-li="yarn login"
 alias y-lo="yarn logout"
 alias y-ls="yarn ls --depth=0"
+alias y-lsg="yarn global ls --depth=0"
 alias y-o="yarn outdated"
 alias y-p="yarn publish"
 alias y-r="yarn remove"
@@ -155,8 +156,10 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # Homebrew
 SBIN="/usr/local/sbin"
 BIN="/usr/local/bin"
+# Yarn
+YARN="$(yarn global bin)"
 # Composer
 COMPOSER="~/.composer/vendor/bin"
 # Path
-PATH="$SBIN:$BIN:$COMPOSER:$PATH"
+PATH="$SBIN:$BIN:$YARN:$COMPOSER:$PATH"
 export PATH
